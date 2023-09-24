@@ -1,0 +1,13 @@
+Refer : https://pimcore.com/docs/platform/Pimcore/Getting_Started/Installation/Docker_Based_Installation
+
+1. pimcore running on docker 
+# empty skeleton package for experienced developers (`pimcore/skeleton`).
+docker run -u `id -u`:`id -g` --rm -v `pwd`:/var/www/html pimcore/pimcore:php8.2-latest composer create-project pimcore/skeleton my-project
+2. edit nginx.conf
+# Nonaktifkan IPv6 pada Nginx
+3. edit docker-compose.yaml
+# remove tags test
+4. masuk ke dalam container php untuk setup pimcore installation
+# ./vendor/bin/pimcore-install
+5. buka localhost:80 or localhost:80/admin pada browser
+
